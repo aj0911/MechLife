@@ -1,0 +1,131 @@
+/* Header Css Starts */
+
+/* Header */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: var(--navColor);
+    position: fixed;
+}
+
+/* logo */
+header .logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header .logo h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--textColor);
+}
+header .logo h1 span{
+    color:var(--mainColor);
+}
+/* logo ends */
+
+/* Menus */
+header .menus{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+header .menus li>a{
+    color: var(--menuColor);
+    font-size: .9rem;
+    font-weight: 600;
+}
+header .menus li>a:hover{
+    color: var(--mainColor);
+}
+header .menu{
+    display: none;
+}
+header .menus .close{
+    display: none;
+}
+/* menu ends */
+/* Header Css Ends */
+
+/* Responsive */
+
+/* For tablets Size */
+@media screen and (max-width:999px) {
+    header .menus{
+        display: none;
+    }
+    header .menu{
+        display: flex;
+        font-size:2.5rem;
+        color: var(--mainColor);
+    }
+    header .logo h1{
+        color: var(--mainColor);
+    }
+    header .menus{
+        position: absolute;
+        top: -100vh;
+        left: 10%;
+        width: 80%;
+        height: fit-content;
+        background-color: var(--navColor);        
+        display: flex;
+        flex-direction: column;
+        transition: top .5s;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 10px 10px 50px rgba(0,0,0,.4);
+    }
+    header .menus li>a{
+        font-size: 1.1rem;
+        font-weight: 700;
+        border-bottom: 1px solid var(--textColorAlt);
+        padding-bottom: 10px;
+    }
+    header .menus .close{
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        display: flex;
+        background-color: var(--navColor);
+        padding: 5px;
+        font-size: 2rem;
+        border-radius: 50%;
+        color: var(--mainColor);
+        transform: translate(-50%,-50%);
+    }
+    header.active .menus{
+        top: 150%;
+    }
+}
+
+/* For mobile phone Size */
+@media screen and (max-width:599px) {
+    header .logo h1{
+        font-size: 1.5rem;
+    }
+    header .menu{
+        font-size: 1.5rem;
+    }
+    header .menus li>a{
+        font-size: .7rem;
+        padding-bottom: 5px;
+    }
+    header .menus{
+        gap: .5rem;
+    }
+    header .menus .close{
+        font-size: 1rem;
+        
+    }
+}
+
+/* End Responsive */

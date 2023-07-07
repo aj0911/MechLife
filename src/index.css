@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+/* Global variables */
+:root{
+    --mainColor:#A9A3ED;
+    --primaryColor:#FBFAFF;
+    --secondaryColor:#F4F2FF;
+    --navColor:#E9E7FD;
+    --textColor:black;
+    --textColorAlt:#777580;
+    --menuColor:#4B4A5C;
+    --paraColor:#B0AFB4;
+    --transition:all .4s;
+}
+
+/* root css */
+*{
+    font-family: Poppins;
+    text-decoration: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* html */
+html{
+    user-select: none;
+}
+
+/* Scroll Bar */
+::-webkit-scrollbar{
+   display: none;
+}
+
+/* btn class */
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.btns button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: .9rem;
+    padding: 7px 30px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.btns button:first-child{
+    background-color: transparent;
+    border: 1px solid var(--mainColor);
+    color: var(--mainColor);
+}
+
+.btns button:last-child{
+    background-color: var(--mainColor);
+    border: 1px solid var(--mainColor);
+    color: var(--primaryColor);
+}
+.btns button:hover{
+    transform: scale(1.05);
+}
+/* btn class ends */
+
+/* Responsive */
+
+/* For tablets Size */
+@media screen and (max-width:999px) {
+    
+}
+
+/* For mobile phone Size */
+@media screen and (max-width:599px) {
+    .btns button{
+        padding: 5px 10px;
+        font-size: .6rem;
+    }
+}
+
+/* End Responsive */
+
