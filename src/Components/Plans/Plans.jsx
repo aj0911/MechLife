@@ -39,7 +39,7 @@ const Plans = () => {
                     plan.map((e,i)=>(
                         <div className="planCard" key={i}>
                             <h3>{e.name}</h3>
-                            <h2>₹{e.price}/Mo</h2>
+                            <h2>₹<span>{e.price}</span>/Mo</h2>
                             <button>Choose Plan</button>
                             <ul>
                                 {
@@ -47,7 +47,7 @@ const Plans = () => {
                                         <li key={j}>
                                             {
                                                 (i<plan.length-1 && j>features.length-3+i)
-                                                ?<RxCross2/>:<TiTick/>
+                                                ?<RxCross2 style={{color:'var(--menuColor)'}}/>:<TiTick style={{color:'green'}}/>
                                             }
                                             <p>{f}</p>
                                         </li>
