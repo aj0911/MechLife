@@ -9,6 +9,14 @@ const Header = () => {
     const menuClick = ()=>{
         header.current.classList.toggle('active');
     }
+    const active = (e)=>{
+        const list = header.current.childNodes[1].childNodes;
+        for(let i=0;i<list.length;i++){
+            list[i].classList.remove('active');
+        }
+        e.classList.add('active');
+        header.current.classList.toggle('active');
+    }
   return (
     <header ref={header}>
         <div className="logo">
@@ -19,12 +27,12 @@ const Header = () => {
             }
         </div>
         <ul className="menus">
-            <li onClick={menuClick}><a href="#Home">Home</a></li>
-            <li onClick={menuClick}><a href="#About">About</a></li>
-            <li onClick={menuClick}><a href="#Services">Services</a></li>
-            <li onClick={menuClick}><a href="#Plans">Plans</a></li>
-            <li onClick={menuClick}><a href="#Reviews">Reviews</a></li>
-            <li onClick={menuClick}><a href="#Appointment">Appointment</a></li>
+            <li onClick={(e)=>active(e.currentTarget)}><a href="#Home">Home</a></li>
+            <li onClick={(e)=>active(e.currentTarget)}><a href="#About">About</a></li>
+            <li onClick={(e)=>active(e.currentTarget)}><a href="#Services">Services</a></li>
+            <li onClick={(e)=>active(e.currentTarget)}><a href="#Plans">Plans</a></li>
+            <li onClick={(e)=>active(e.currentTarget)}><a href="#Reviews">Reviews</a></li>
+            <li onClick={(e)=>active(e.currentTarget)}><a href="#Appointment">Appointment</a></li>
             <li onClick={menuClick} className="close">
                 <AiFillCloseCircle/>
             </li>

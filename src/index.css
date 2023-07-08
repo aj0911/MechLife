@@ -26,6 +26,7 @@
 /* html */
 html{
     user-select: none;
+    scroll-behavior: smooth;
 }
 
 /* Scroll Bar */
@@ -67,6 +68,9 @@ html{
 }
 /* btn class ends */
 
+
+
+
 /* Responsive */
 
 /* For tablets Size */
@@ -78,7 +82,7 @@ html{
 @media screen and (max-width:599px) {
     .btns button{
         padding: 5px 10px;
-        font-size: .6rem;
+        font-size: .9rem;
     }
 }
 

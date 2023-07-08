@@ -1,0 +1,120 @@
+/* About Section Starts */
+.about{
+    padding: 100px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 2rem;
+    flex-direction: column;
+}
+.about .aboutBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+}
+.about .aboutBox .intro{
+    align-self: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.about .aboutBox .intro h3{
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+.about .aboutBox .intro p{
+    font-size: .9rem;
+    font-weight: 500;
+    color: var(--menuColor);
+}
+
+.about .aboutBox .cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+}
+.about .aboutBox .cards .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: calc(50% - 1rem);
+    background-color: var(--navColor);
+    padding: 20px;
+    border-radius: 5px;
+    transition: var(--transition);
+}
+.about .aboutBox .cards .card .left{
+    background-color: var(--secondaryColor);
+    padding: 10px;
+    font-size: 1.5rem;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .aboutBox .cards .card .right{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.about .aboutBox .cards .card .right h4{
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.about .aboutBox .cards .card .right p{
+    font-size: .9rem;
+    color: var(--textColorAlt);
+}
+.about .aboutBox .cards .card:hover{
+    transform: scale(1.05);
+}
+/* About Section ends */
+
+/* Responsive */
+
+/* For tablets Size */
+@media screen and (max-width:999px) {
+    .about .aboutBox .cards{
+        flex-direction: column;
+    }
+    .about .aboutBox .cards .card{
+        width: 100%;
+    }
+}
+
+/* For mobile phone Size */
+@media screen and (max-width:599px) {
+    .about .aboutBox .intro h3 {
+        font-size: .9rem;
+    }
+    .about .aboutBox .intro p {
+        font-size: .7rem;
+    }
+    .about .aboutBox .cards .card .left {
+        font-size: 1rem
+    }
+    .about .aboutBox .cards .card .right{
+        gap: .1rem;
+    }
+    .about .aboutBox .cards .card .right h4 {
+        font-size: .9rem;
+    }
+    .about .aboutBox .cards .card .right p {
+        font-size: .7rem;
+    }
+}

@@ -9,6 +9,7 @@ header{
     padding: 20px 5%;
     background-color: var(--navColor);
     position: fixed;
+    z-index: 5;
 }
 
 /* logo */
@@ -52,6 +53,10 @@ header .menu{
 header .menus .close{
     display: none;
 }
+header .menus li.active > a{
+    color: var(--mainColor);
+    border-color: var(--mainColor);
+}
 /* menu ends */
 /* Header Css Ends */
 
@@ -66,6 +71,9 @@ header .menus .close{
         display: flex;
         font-size:2.5rem;
         color: var(--mainColor);
+        cursor: pointer;
+        transition: var(--transition);
+
     }
     header .logo h1{
         color: var(--mainColor);
@@ -83,12 +91,19 @@ header .menus .close{
         padding: 50px;
         border-radius: 10px;
         box-shadow: 10px 10px 50px rgba(0,0,0,.4);
+        z-index: 5;
+    }
+    header .menu:hover{
+        transform: scale(1.05);
     }
     header .menus li>a{
         font-size: 1.1rem;
         font-weight: 700;
         border-bottom: 1px solid var(--textColorAlt);
         padding-bottom: 10px;
+    }
+    header .menus li:hover a{
+        border-color: var(--mainColor);
     }
     header .menus .close{
         position: absolute;
@@ -97,26 +112,32 @@ header .menus .close{
         display: flex;
         background-color: var(--navColor);
         padding: 5px;
+        transition: var(--transition);
         font-size: 2rem;
         border-radius: 50%;
         color: var(--mainColor);
         transform: translate(-50%,-50%);
+        cursor: pointer;
+    }
+    header .menus .close:hover{
+        transform: translate(-50%,-50%) scale(1.05);
     }
     header.active .menus{
         top: 150%;
+        
     }
 }
 
 /* For mobile phone Size */
 @media screen and (max-width:599px) {
     header .logo h1{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     header .menu{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     header .menus li>a{
-        font-size: .7rem;
+        font-size: .9rem;
         padding-bottom: 5px;
     }
     header .menus{

@@ -1,0 +1,76 @@
+/* Title Starts */
+.title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem;
+    align-self: flex-start;
+}
+.title h3{
+    font-size: 2rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--mainColor);
+}
+.title .name h3{
+    color: var(--menuColor);
+}
+.title .name .underline{
+    height: 5px;
+    border-radius: 2px;
+    background-color: var(--navColor);
+    position: relative;
+    margin-top: 5px;
+}
+.title .name .underline::after{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10%;
+    height: 100%;
+    background-color: var(--mainColor);
+    content: '';
+    border-radius: 2px;
+    animation: titleUnderlineLoader  1.5s linear infinite;
+}
+/* Title Ends */
+
+/* Animation for Titles */
+@keyframes titleUnderlineLoader {
+    0%{
+        left:0;
+    }
+    20%{
+        left: 10%;
+    }
+    40%{
+        left: 30%;
+    }
+    60%{
+        left: 50%;
+    }
+    80%{
+        left: 70%;
+    }
+    100%{
+        left: 90%;
+    }
+}
+/* Animation for Titles ends */
+
+/* Responsive */
+
+/* For tablets Size */
+@media screen and (max-width:999px) {
+    
+}
+
+/* For mobile phone Size */
+@media screen and (max-width:599px) {
+    .title h3{
+        font-size: 1.1rem;
+    }
+    .title .name .underline{
+        height: 4px;
+    }
+}
