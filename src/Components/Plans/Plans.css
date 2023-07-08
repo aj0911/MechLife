@@ -1,0 +1,9 @@
+.plans{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 100px 5%;
+    width: 100%;
+}

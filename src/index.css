@@ -31,7 +31,7 @@ html{
 
 /* Scroll Bar */
 ::-webkit-scrollbar{
-   display: none;
+    display: none;
 }
 
 /* btn class */
@@ -87,4 +87,36 @@ html{
 }
 
 /* End Responsive */
+
+/* Animation */
+@keyframes slideUp {
+    0%{
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideLeft {
+    0%{
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@keyframes slideRight {
+    0%{
+        transform: translateX(20px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
 
