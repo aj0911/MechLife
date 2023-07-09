@@ -1,0 +1,95 @@
+.appointment{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 100px 5%;
+    gap: 2rem;
+}
+.appointment .appointmentBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+.appointment .appointmentBox .left{
+    width: 50%;
+    overflow: hidden;
+}
+.appointment .appointmentBox .left form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+.appointment .appointmentBox .left form input,.appointment .appointmentBox .left form select{
+    width: calc(50% - .5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--menuColor);
+    background-color: var(--navColor);
+    border: none;
+    border-radius: 3px;
+}
+.appointment .appointmentBox .left form input[type="submit"]{
+    color: var(--primaryColor);
+    background-color: var(--mainColor);
+    padding: 10px 20px;
+    width: fit-content;
+}
+.appointment .appointmentBox .left form textarea{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    resize: none;
+    padding: 10px;
+    font-size: .9rem;
+    font-weight: 700;
+    color: var(--menuColor);
+    background-color: var(--navColor);
+    border: none;
+    border-radius: 3px;
+}
+
+.appointment .appointmentBox .right{
+    width: 50%;
+    overflow: hidden;
+}
+.appointment .appointmentBox .right img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Responsive */
+
+/* For tablets Size */
+@media screen and (max-width:999px) {
+    .appointment .appointmentBox{
+        flex-direction: column;
+    }
+    .appointment .appointmentBox .left,.appointment .appointmentBox .right {
+        width: 100%;
+    }
+}
+
+/* For mobile phone Size */
+@media screen and (max-width:599px) {
+    .appointment .appointmentBox .left form textarea,.appointment .appointmentBox .left form input{
+        font-size: .7rem;
+    }
+    .appointment .appointmentBox .left form select{
+        font-size: .7rem;
+    }
+}
+
+/* End Responsive */

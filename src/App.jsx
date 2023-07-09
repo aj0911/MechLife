@@ -7,6 +7,7 @@ import About from './Components/About/About'
 import Services from './Components/Services/Services'
 import Plans from './Components/Plans/Plans'
 import Review from './Components/Reviews/Review'
+import Appointment from './Components/Appointment/Appointment'
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Services/>
         <Plans/>
         <Review/>
+        <Appointment/>
         <Footer/>
     </div>
   )

@@ -68,7 +68,7 @@
 /* For mobile phone Size */
 @media screen and (max-width:599px) {
     .title h3{
-        font-size: 1.1rem;
+        font-size: 1.035rem;
     }
     .title .name .underline{
         height: 4px;

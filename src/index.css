@@ -68,7 +68,9 @@ html{
 }
 /* btn class ends */
 
-
+input:focus,textarea:focus,select:focus{
+    outline-width: 0;
+}
 
 
 /* Responsive */
